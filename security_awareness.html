@@ -3,26 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Security Awareness Phishing</title>
+  <title>Login - Security Awareness</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="login-container">
-    <h2>Login</h2>
+    <div class="login-header">
+      <h2>Welcome Back!</h2>
+      <p>Please login to your account</p>
+    </div>
     <form id="loginForm">
-      <input type="email" id="email" placeholder="Masukkan email Anda" required>
-      <input type="password" id="password" placeholder="Masukkan kata sandi Anda" required>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
       <button type="submit">Login</button>
     </form>
     <div class="warning-message" id="warningMessage">
-      <h3>⚠️ Waspada Phishing!</h3>
-      <p>Anda baru saja mencoba login ke halaman yang mencurigakan. Berikut adalah beberapa tips untuk mengenali phishing:</p>
+      <h3>⚠️ Warning: Phishing Attempt!</h3>
+      <p>This is a simulated phishing page. Here are some tips to stay safe:</p>
       <ul>
-        <li>Periksa URL website. Pastikan alamatnya benar dan menggunakan <strong>HTTPS</strong>.</li>
-        <li>Jangan pernah memasukkan informasi sensitif di halaman yang tidak terpercaya.</li>
-        <li>Selalu aktifkan autentikasi dua faktor (2FA) untuk keamanan ekstra.</li>
+        <li>Always check the URL before entering sensitive information.</li>
+        <li>Enable two-factor authentication (2FA) for added security.</li>
+        <li>Never share your password with anyone.</li>
       </ul>
-      <p><strong>Ingat:</strong> Halaman ini adalah simulasi untuk meningkatkan kesadaran keamanan.</p>
     </div>
   </div>
 
