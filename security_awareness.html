@@ -34,10 +34,27 @@
     </div>
   </div>
 
+  <!-- Pop-up Pemberitahuan -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-popup" id="closePopup">&times;</span>
+      <h3>Security Awareness!</h3>
+      <p>This is a simulated login page for educational purposes. Do not enter real credentials.</p>
+      <div class="whale-animation"></div>
+    </div>
+  </div>
+
   <script>
+    // Tampilkan pop-up saat form login disubmit
     document.getElementById('loginForm').addEventListener('submit', function(event) {
       event.preventDefault(); // Mencegah pengiriman form
       document.getElementById('warningMessage').style.display = 'block'; // Tampilkan pesan peringatan
+      document.getElementById('popup').style.display = 'block'; // Tampilkan pop-up
+    });
+
+    // Tutup pop-up saat tombol close diklik
+    document.getElementById('closePopup').addEventListener('click', function() {
+      document.getElementById('popup').style.display = 'none';
     });
   </script>
 </body>
