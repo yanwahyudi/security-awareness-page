@@ -23,25 +23,94 @@
       </div>
       <button type="submit">Login</button>
     </form>
-    <div class="warning-message" id="warningMessage">
-      <h3>⚠️ Warning: Phishing Attempt!</h3>
-      <p>This is a simulated phishing page. Here are some tips to stay safe:</p>
-      <ul>
-        <li>Always check the URL before entering sensitive information.</li>
-        <li>Enable two-factor authentication (2FA) for added security.</li>
-        <li>Never share your password with anyone.</li>
-      </ul>
-      <div class="whale-animation">
-        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXJ6ZWw2a2l4ZTk3bW51MHpsZ3IxYjYwbHV2M3VieXljc3g1bnMwOSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/K27SLAxTENwvQqOgPB/giphy.gif" alt="Cute Whale Animation">
-        <p>This is just a security awareness exercise! 🐋</p>
-      </div>
-    </div>
   </div>
 
   <script>
     document.getElementById('loginForm').addEventListener('submit', function(event) {
       event.preventDefault(); // Mencegah pengiriman form
-      document.getElementById('warningMessage').style.display = 'block'; // Tampilkan pesan peringatan
+
+      // Buka pop-up window baru
+      const popupWindow = window.open('', 'Security Awareness', 'width=600,height=400');
+      popupWindow.document.write(`
+        <!DOCTYPE html>
+        <html lang="id">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Security Awareness</title>
+          <style>
+            body {
+              font-family: 'Arial', sans-serif;
+              background: #f9f9f9;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              margin: 0;
+              color: #333;
+            }
+            .popup-container {
+              background: #ffffff;
+              padding: 30px;
+              border-radius: 12px;
+              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+              width: 80%;
+              max-width: 500px;
+              text-align: center;
+              animation: fadeIn 0.5s ease-in-out;
+            }
+            .popup-container h3 {
+              font-size: 20px;
+              color: #c62828;
+              margin-bottom: 15px;
+            }
+            .popup-container p {
+              font-size: 14px;
+              margin-bottom: 15px;
+            }
+            .popup-container ul {
+              font-size: 14px;
+              padding-left: 20px;
+              margin: 0;
+              text-align: left;
+            }
+            .whale-animation {
+              margin-top: 20px;
+            }
+            .whale-animation img {
+              width: 150px;
+              height: auto;
+              border-radius: 10px;
+            }
+            .whale-animation p {
+              font-size: 14px;
+              color: #2575fc;
+              margin-top: 10px;
+            }
+            @keyframes fadeIn {
+              from { opacity: 0; transform: translateY(-20px); }
+              to { opacity: 1; transform: translateY(0); }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="popup-container">
+            <h3>⚠️ Warning: Phishing Attempt!</h3>
+            <p>This is a simulated phishing page. Here are some tips to stay safe:</p>
+            <ul>
+              <li>Always check the URL before entering sensitive information.</li>
+              <li>Enable two-factor authentication (2FA) for added security.</li>
+              <li>Never share your password with anyone.</li>
+            </ul>
+            <div class="whale-animation">
+              <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXJ6ZWw2a2l4ZTk3bW51MHpsZ3IxYjYwbHV2M3VieXljc3g1bnMwOSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/K27SLAxTENwvQqOgPB/giphy.gif" alt="Cute Whale Animation">
+              <p>This is just a security awareness exercise! 🐋</p>
+            </div>
+          </div>
+        </body>
+        </html>
+      `);
+      popupWindow.document.close();
     });
   </script>
 </body>
