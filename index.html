@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +10,8 @@
         /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #fff; /* Background putih */
-            color: #333; /* Warna teks lebih gelap untuk kontras yang lebih baik */
+            background-color: #fff; /* White background */
+            color: #333; /* Darker text color for better contrast */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -21,18 +21,18 @@
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.9); /* Box login dengan transparansi sedikit */
-            padding: 30px;
+            background: rgba(0, 0, 0, 0.7); /* Slightly darker background for contrast */
+            padding: 35px;
             border-radius: 15px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
             text-align: center;
-            width: 100%;
-            max-width: 400px; /* Lebar lebih presisi */
+            width: 85%;
+            max-width: 420px;
             animation: fadeInUp 1s ease-in-out;
         }
 
         h1 {
-            color: #333;
+            color: #fff;
             font-size: 28px;
             font-weight: 600;
             margin-bottom: 10px;
@@ -41,7 +41,7 @@
         p {
             font-size: 16px;
             margin-bottom: 25px;
-            color: #666;
+            color: #ddd;
         }
 
         .nav-button {
@@ -67,6 +67,18 @@
         .nav-button:active {
             transform: translateY(1px);
             box-shadow: 0 3px 10px rgba(37, 117, 252, 0.4);
+        }
+
+        /* Back Button */
+        .back-button {
+            background: #f44336; /* Red color for back button */
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(244, 67, 54, 0.5);
         }
 
         /* Animations */
@@ -113,10 +125,60 @@
 
     <div class="container">
         <h1>Security Awareness</h1>
-        <p>Selamat datang di portal keamanan siber. Silakan masuk atau daftar untuk mengakses informasi lebih lanjut.</p>
+        <p>Welcome to the cybersecurity portal. Please log in or sign up to access more information.</p>
 
         <a href="security_awareness.html" class="nav-button">🔐 Login</a>
         <a href="signup.html" class="nav-button">📝 Sign Up</a>
+    </div>
+
+</body>
+</html>
+
+<!-- Halaman Login (security_awareness.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Security Awareness</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Login</h1>
+        <form>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="nav-button">Log In</button>
+        </form>
+        <a href="index.html" class="back-button">🔙 Back</a>
+    </div>
+
+</body>
+</html>
+
+<!-- Halaman Sign Up (signup.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Security Awareness</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="nav-button">Sign Up</button>
+        </form>
+        <a href="index.html" class="back-button">🔙 Back</a>
     </div>
 
 </body>
