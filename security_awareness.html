@@ -1,116 +1,46 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Security Awareness</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Pastikan path CSS benar -->
+  <title>Phishing Trap - Security Awareness</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="login-container">
-    <div class="login-header">
-      <h2>Welcome Back!</h2>
-      <p>Please login to your account</p>
+  <div class="container">
+    <h1>Welcome to Cybersecurity Learning</h1>
+    <p class="subtitle">This is a phishing trap simulation for educational purposes only.</p>
+    
+    <div class="login-box">
+      <h2>Login or Sign Up</h2>
+      <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        
+        <button type="submit">Login</button>
+        <button type="button" id="signupBtn">Sign Up</button>
+      </form>
     </div>
-    <form id="loginForm">
-      <div class="input-group">
-        <label for="username">Username</label>
-        <input type="text" id="username" placeholder="Enter your username" required>
-      </div>
-      <div class="input-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter your password" required>
-      </div>
-      <button type="submit">Login</button>
-    </form>
+
+    <div id="message" class="hidden">
+      <p>⚠️ <strong>Security Alert!</strong> ⚠️</p>
+      <p>You just fell for a phishing trap! This is a simulation to teach you about the dangers of entering your credentials on untrusted websites.</p>
+      <p>Always verify the URL and ensure the website is secure (look for <strong>https://</strong> and a padlock icon).</p>
+      <p>Stay safe and practice good cybersecurity habits!</p>
+    </div>
   </div>
 
   <script>
     document.getElementById('loginForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Mencegah pengiriman form
+      event.preventDefault();
+      document.getElementById('message').classList.remove('hidden');
+    });
 
-      // Buka pop-up window baru
-      const popupWindow = window.open('', 'Security Awareness', 'width=600,height=400');
-      popupWindow.document.write(`
-        <!DOCTYPE html>
-        <html lang="id">
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Security Awareness</title>
-          <style>
-            body {
-              font-family: 'Arial', sans-serif;
-              background: #f9f9f9;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              height: 100vh;
-              margin: 0;
-              color: #333;
-            }
-            .popup-container {
-              background: #ffffff;
-              padding: 30px;
-              border-radius: 12px;
-              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-              width: 80%;
-              max-width: 500px;
-              text-align: center;
-              animation: fadeIn 0.5s ease-in-out;
-            }
-            .popup-container h3 {
-              font-size: 20px;
-              color: #c62828;
-              margin-bottom: 15px;
-            }
-            .popup-container p {
-              font-size: 14px;
-              margin-bottom: 15px;
-            }
-            .popup-container ul {
-              font-size: 14px;
-              padding-left: 20px;
-              margin: 0;
-              text-align: left;
-            }
-            .whale-animation {
-              margin-top: 20px;
-            }
-            .whale-animation img {
-              width: 150px;
-              height: auto;
-              border-radius: 10px;
-            }
-            .whale-animation p {
-              font-size: 14px;
-              color: #2575fc;
-              margin-top: 10px;
-            }
-            @keyframes fadeIn {
-              from { opacity: 0; transform: translateY(-20px); }
-              to { opacity: 1; transform: translateY(0); }
-            }
-          </style>
-        </head>
-        <body>
-          <div class="popup-container">
-            <h3>⚠️ Warning: Phishing Attempt!</h3>
-            <p>This is a simulated phishing page. Here are some tips to stay safe:</p>
-            <ul>
-              <li>Always check the URL before entering sensitive information.</li>
-              <li>Enable two-factor authentication (2FA) for added security.</li>
-              <li>Never share your password with anyone.</li>
-            </ul>
-            <div class="whale-animation">
-              <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXJ6ZWw2a2l4ZTk3bW51MHpsZ3IxYjYwbHV2M3VieXljc3g1bnMwOSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/K27SLAxTENwvQqOgPB/giphy.gif" alt="Cute Whale Animation">
-              <p>This is just a security awareness exercise! 🐋</p>
-            </div>
-          </div>
-        </body>
-        </html>
-      `);
-      popupWindow.document.close();
+    document.getElementById('signupBtn').addEventListener('click', function() {
+      alert("Sign Up is not available in this simulation. Always verify the legitimacy of sign-up pages in real scenarios.");
     });
   </script>
 </body>
