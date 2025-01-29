@@ -1,111 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Interactive security awareness page to educate users on cybersecurity best practices.">
-    <title>Security Awareness Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f8ff;
-            color: #333;
-        }
-        header {
-            background: #0078d7;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-        }
-        header h1 {
-            margin: 0;
-        }
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .quiz {
-            margin: 2rem 0;
-        }
-        .question {
-            margin-bottom: 1rem;
-        }
-        .options {
-            list-style: none;
-            padding: 0;
-        }
-        .options li {
-            margin: 0.5rem 0;
-        }
-        .result {
-            margin-top: 1rem;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #0078d7;
-            color: white;
-            margin-top: 2rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Security Awareness Phishing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+    .login-container h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .login-container button:hover {
+      background-color: #0056b3;
+    }
+    .warning-message {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #ffebee;
+      border: 1px solid #ffcdd2;
+      border-radius: 4px;
+      color: #c62828;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Security Awareness Game</h1>
-    </header>
-    <div class="container">
-        <h2>Test Your Security Knowledge!</h2>
-        <p>Answer the following questions to see how well you understand cybersecurity best practices.</p>
-        <div class="quiz">
-            <div class="question">
-                <p><strong>Question 1:</strong> What is the safest way to create a strong password?</p>
-                <ul class="options">
-                    <li><input type="radio" name="q1" value="wrong"> Use your name and birthday</li>
-                    <li><input type="radio" name="q1" value="wrong"> Use the word "password"</li>
-                    <li><input type="radio" name="q1" value="correct"> Use a mix of letters, numbers, and symbols</li>
-                </ul>
-            </div>
-            <div class="question">
-                <p><strong>Question 2:</strong> How can you identify a phishing email?</p>
-                <ul class="options">
-                    <li><input type="radio" name="q2" value="correct"> It asks for personal information and has suspicious links</li>
-                    <li><input type="radio" name="q2" value="wrong"> It comes from a trusted organization</li>
-                    <li><input type="radio" name="q2" value="wrong"> It has no spelling errors</li>
-                </ul>
-            </div>
-            <button onclick="checkAnswers()">Submit Answers</button>
-            <div class="result" id="result"></div>
-        </div>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Masukkan email Anda" required>
+      <input type="password" id="password" placeholder="Masukkan kata sandi Anda" required>
+      <button type="submit">Login</button>
+    </form>
+    <div class="warning-message" id="warningMessage">
+      <h3>⚠️ Waspada Phishing!</h3>
+      <p>Anda baru saja mencoba login ke halaman yang mencurigakan. Berikut adalah beberapa tips untuk mengenali phishing:</p>
+      <ul>
+        <li>Periksa URL website. Pastikan alamatnya benar dan menggunakan <strong>HTTPS</strong>.</li>
+        <li>Jangan pernah memasukkan informasi sensitif di halaman yang tidak terpercaya.</li>
+        <li>Selalu aktifkan autentikasi dua faktor (2FA) untuk keamanan ekstra.</li>
+      </ul>
+      <p><strong>Ingat:</strong> Halaman ini adalah simulasi untuk meningkatkan kesadaran keamanan.</p>
     </div>
-    <footer>
-        <p>&copy; 2025 Security Awareness Page. All Rights Reserved.</p>
-    </footer>
-    <script>
-        function checkAnswers() {
-            let score = 0;
-            const answers = document.querySelectorAll('input[type="radio"]:checked');
-            answers.forEach(answer => {
-                if (answer.value === "correct") {
-                    score++;
-                }
-            });
-            const result = document.getElementById("result");
-            result.textContent = `You scored ${score} out of 2!`;
-            if (score === 2) {
-                result.style.color = "green";
-                result.textContent += " Excellent work!";
-            } else {
-                result.style.color = "red";
-                result.textContent += " Keep learning to improve your awareness!";
-            }
-        }
-    </script>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Mencegah pengiriman form
+      document.getElementById('warningMessage').style.display = 'block'; // Tampilkan pesan peringatan
+    });
+  </script>
 </body>
 </html>
