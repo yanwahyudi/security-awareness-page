@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Security Awareness</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Pastikan path CSS benar -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="login-container">
     <div class="login-header">
       <h2>Welcome Back!</h2>
-      <p>Please signup or login to your account</p>
+      <p>Please login to your account</p>
     </div>
     <form id="loginForm">
       <div class="input-group">
@@ -27,9 +27,9 @@
 
   <script>
     document.getElementById('loginForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Mencegah pengiriman form
+      event.preventDefault(); // Prevent form submission
 
-      // Buka pop-up window baru
+      // Open a pop-up window for the security awareness message
       const popupWindow = window.open('', 'Security Awareness', 'width=600,height=400');
       popupWindow.document.write(`
         <!DOCTYPE html>
