@@ -23,7 +23,7 @@ body {
   text-align: center;
   animation: fadeIn 0.5s ease-in-out;
   box-sizing: border-box; /* Pastikan padding dihitung dalam lebar */
-  margin: 0 10px; /* Memberikan margin untuk jarak dari sisi */
+  margin: 0 20px; /* Memberikan jarak untuk memastikan tidak menempel pada tepi */
 }
 
 /* Header */
@@ -107,7 +107,7 @@ button:hover {
   .login-container {
     padding: 25px;
     max-width: 90%; /* Lebar menyesuaikan layar */
-    margin: 10px; /* Jarak dari tepi layar */
+    margin: 0 15px; /* Jarak lebih sedikit pada ponsel */
   }
 
   .login-header h2 {
