@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Awareness</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             background: url('sc.jpeg') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
@@ -17,43 +18,95 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            animation: fadeIn 1s ease-in-out;
         }
 
         .container {
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparan */
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.8); /* Lebih gelap untuk kontras lebih baik */
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
             text-align: center;
-            width: 80%;
-            max-width: 400px;
+            width: 85%;
+            max-width: 420px;
+            animation: fadeInUp 1s ease-in-out;
         }
 
         h1 {
-            color: #2575fc;
-            font-size: 26px;
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 10px;
         }
 
         p {
             font-size: 16px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            color: #ddd;
         }
 
         .nav-button {
-            display: block;
+            display: inline-block;
             width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            background: #2575fc;
+            padding: 14px;
+            margin: 12px 0;
+            background: linear-gradient(135deg, #2575fc, #6a11cb);
             color: white;
             text-decoration: none;
-            border-radius: 6px;
-            font-size: 16px;
-            transition: background 0.3s ease;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 500;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 117, 252, 0.4);
         }
 
         .nav-button:hover {
-            background: #1a5bbf;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 117, 252, 0.5);
+        }
+
+        .nav-button:active {
+            transform: translateY(1px);
+            box-shadow: 0 3px 10px rgba(37, 117, 252, 0.4);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 500px) {
+            .container {
+                width: 90%;
+                padding: 25px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 14px;
+            }
+            .nav-button {
+                font-size: 15px;
+                padding: 12px;
+            }
         }
     </style>
 </head>
@@ -63,8 +116,8 @@
         <h1>Security Awareness</h1>
         <p>Selamat datang di portal keamanan siber. Silakan masuk atau daftar untuk mengakses informasi lebih lanjut.</p>
 
-        <a href="security_awareness.html" class="nav-button">Login</a>
-        <a href="signup.html" class="nav-button">Sign Up</a>
+        <a href="security_awareness.html" class="nav-button">🔐 Login</a>
+        <a href="signup.html" class="nav-button">📝 Sign Up</a>
     </div>
 
 </body>
