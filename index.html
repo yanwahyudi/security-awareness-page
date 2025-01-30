@@ -4,72 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Awareness</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #0b132b;
-            color: white;
-            text-align: center;
-        }
-        .container {
+            font-family: 'Poppins', sans-serif;
+            background: url('sc.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-        }
-        .box {
-            background: white;
-            color: black;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 0;
             text-align: center;
-            width: 350px;
         }
-        .box h2 {
+
+        .cybersecurity-text {
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 20px;
+            max-width: 600px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 420px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 28px;
+            font-weight: 600;
             margin-bottom: 10px;
         }
-        .box p {
-            font-size: 14px;
-            margin-bottom: 20px;
+
+        p {
+            font-size: 16px;
+            margin-bottom: 25px;
+            color: #555;
         }
-        .button {
-            display: block;
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .nav-button {
+            display: inline-block;
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .login {
-            background: linear-gradient(45deg, #4a90e2, #673ab7);
+            padding: 14px;
+            background: linear-gradient(135deg, #2575fc, #6a11cb);
             color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 500;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 117, 252, 0.4);
+            text-align: center;
         }
-        .signup {
-            background: linear-gradient(45deg, #42a5f5, #7b1fa2);
-            color: white;
+
+        .nav-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 117, 252, 0.5);
         }
-        .info {
-            margin-top: 20px;
-            max-width: 600px;
-            font-size: 16px;
+
+        @media (max-width: 500px) {
+            .container {
+                width: 90%;
+                padding: 25px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 14px;
+            }
+            .nav-button {
+                font-size: 15px;
+                padding: 12px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="cybersecurity-text">
+        Cybersecurity is essential in today's digital world. Stay aware and protect your information from threats and vulnerabilities.
+    </div>
     <div class="container">
-        <div class="info">
-            <h1>Enhancing Cybersecurity Awareness</h1>
-            <p>Stay vigilant against cyber threats. Always use strong passwords, enable two-factor authentication, and be cautious of phishing attempts.</p>
-        </div>
-        <div class="box">
-            <h2>Security Awareness</h2>
-            <p>Welcome to the cybersecurity portal. Please log in or sign up to access more information.</p>
-            <button class="button login">🔒 Login</button>
-            <button class="button signup">📄 Sign Up</button>
+        <h1>Security Awareness</h1>
+        <p>Welcome to the cybersecurity portal. Please log in or sign up to access more information.</p>
+        <div class="button-container">
+            <a href="security_awareness.html" class="nav-button">🔐 Login</a>
+            <a href="signup.html" class="nav-button">📝 Sign Up</a>
         </div>
     </div>
 </body>
